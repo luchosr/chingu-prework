@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -30,9 +30,55 @@
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-}
+} */
 * {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #282a36;
-  color: white;
+  font-size: 14px;
 }
+
+a {
+  text-decoration: none;
+}
+.sideBar {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  background-color: #44475a;
+
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.link {
+  text-align: center;
+}
+.linkIcon {
+  background-color: #66d8ef;
+  padding: 3px;
+  border-radius: 1.5px;
+  color: #44475a;
+}
+
+.link a {
+  height: 20px;
+  font-size: 11px;
+  color: #66d8ef;
+  display: block;
+  padding: 5px;
+}
+
+/* .iconBkg {
+  height: 20px;
+  background-color: var(--teal);
+  border-radius: 1px;
+  margin: 5px;
+}
+
+.wrench a {
+  color: var(--teal);
+} */

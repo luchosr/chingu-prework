@@ -1,4 +1,4 @@
-const links = [
+const linksData = [
   {
     id: 1,
     color: "#66d8ef",
@@ -42,3 +42,5 @@ const links = [
     icon: "faQuestion"
   }
 ];
+
+export default linksData;

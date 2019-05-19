@@ -58,7 +58,6 @@ a {
   text-align: center;
 }
 .linkIcon {
-  background-color: #66d8ef;
   padding: 3px;
   border-radius: 1.5px;
   color: #44475a;
@@ -67,7 +66,6 @@ a {
 .link a {
   height: 20px;
   font-size: 11px;
-  color: #66d8ef;
   display: block;
   padding: 5px;
 }

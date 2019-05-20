@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import "./App.css";
+import MainDisp from "./MainDisp";
 
 const bodyStyle = {
   backgroundColor: "#272A36",
@@ -9,10 +10,12 @@ const bodyStyle = {
 function App() {
   return (
     <div className="App">
-      <body style={bodyStyle}>
-        <div>hola vengo a probar el body</div>
-        <Sidebar />
-      </body>
+      <Sidebar />
+      <MainDisp />
+      {/* <body style={bodyStyle}>
+       
+
+      </body> */}
     </div>
   );
 }

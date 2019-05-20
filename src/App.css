@@ -5,8 +5,23 @@
   overflow: hidden;
 }
 .mainDisp {
+  background-color: #272a36;
   margin-left: 140px;
   width: 33.33%;
+}
+.jsRedditList {
+  width: 100%;
+}
+.listTitle h4 {
+  text-transform: uppercase;
+  color: #8be9fd;
+  font-family: "Inconsolata", monospace;
+  padding: 10px;
+}
+
+.listTitle {
+  margin: 30px;
+  text-align: center;
 }
 .App {
   width: 100%;

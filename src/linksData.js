@@ -1,7 +1,7 @@
 const linksData = [
   {
     id: 1,
-    color: "#66d8ef",
+    color: "#8BE9FD",
     name: "SETTINGS",
     icon: "faWrench"
   },

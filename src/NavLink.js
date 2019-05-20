@@ -9,7 +9,8 @@ import {
   FaPencilAlt,
   FaRegLightbulb,
   FaQuestion,
-  FaStackOverflow
+  FaStackOverflow,
+  FaLock
 } from "react-icons/fa";
 
 const NavLink = () => {
@@ -18,16 +19,47 @@ const NavLink = () => {
     <div>
       <Link
         icon={FaWrench}
-        name="SETTINGS"
+        name="settings"
         color={{ color: "#8BE9FD" }}
         iconColor={{ backgroundColor: "#8BE9FD" }}
       />
-       <Link icon={FaCode} name="GISTS" color={{ color: "#50FA7B" }} iconColor={{ backgroundColor: "#50FA7B" }} />
-      <Link icon={FaStackOverflow} name="STACK OVERFLOW" color={{ color: "#FFB86C" }} iconColor={{ backgroundColor: "#FFB86C" }} />
-      <Link icon={FaChartLine} name="TRENDING" color={{ color: "#FF79C5" }} iconColor={{ backgroundColor: "#FF79C5" }} />
-      <Link icon={FaPencilAlt} name="SCRATCH PAD" color={{ color: "#BD93F9" }} iconColor={{ backgroundColor: "#BD93F9" }} />
-      <Link icon={FaRegLightbulb} name="PLAYGROUND" color={{ color: "#F8F8F2" }} iconColor={{ backgroundColor: "#F8F8F2" }} />
-      <Link icon={FaQuestion} name="HELP/INTRO" color={{ color: "#E6DA74" }} iconColor={{ backgroundColor: "#E6DA74" }} /> 
+      <Link
+        icon={FaCode}
+        name="gists"
+        color={{ color: "#50FA7B" }}
+        iconColor={{ backgroundColor: "#50FA7B" }}
+      />
+      <Link
+        icon={FaStackOverflow}
+        name="stack overflow"
+        color={{ color: "#FFB86C" }}
+        iconColor={{ backgroundColor: "#FFB86C" }}
+      />
+      <Link
+        icon={FaChartLine}
+        name="trending"
+        color={{ color: "#FF79C5" }}
+        iconColor={{ backgroundColor: "#FF79C5" }}
+      />
+      <Link
+        icon={FaPencilAlt}
+        name="scratch pad"
+        color={{ color: "#BD93F9" }}
+        iconColor={{ backgroundColor: "#BD93F9" }}
+      />
+      <Link
+        icon={FaRegLightbulb}
+        name="playground"
+        color={{ color: "#F8F8F2" }}
+        iconColor={{ backgroundColor: "#F8F8F2" }}
+        extraIcon={FaLock}
+      />
+      <Link
+        icon={FaQuestion}
+        name="help/intro"
+        color={{ color: "#E6DA74" }}
+        iconColor={{ backgroundColor: "#E6DA74" }}
+      />
     </div>
   );
 };

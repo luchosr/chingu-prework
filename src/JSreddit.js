@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FaRedditAlien } from "react-icons/fa";
 import RedditNews from "./RedditNews";
-import { thisTypeAnnotation } from "@babel/types";
 
 class JSreddit extends Component {
   state = {
@@ -30,13 +29,27 @@ class JSreddit extends Component {
   render() {
     const { error, isLoading, redditPosts } = this.state;
     return (
-      <div className="jsRedditList">
-        <div className="listTitle">
+      <div className="jsRedditList" style={{ height: "180%" }}>
+        <div
+          className="listTitle"
+          style={{
+            margin: "30px",
+            textAlign: "center"
+          }}
+        >
           <h4>
             <FaRedditAlien /> popular on r/javascript
           </h4>
         </div>
-        <ul className="newsList">
+        <ul
+          className="newsList invisibleScrollbar"
+          style={{
+            // overflow: "scroll",
+            overflowY: "auto",
+            maxHeight: "100%",
+            marginTop: "40px"
+          }}
+        >
           {redditPosts.length > 0 &&
             redditPosts.map(post => (
               <RedditNews
@@ -51,16 +64,5 @@ class JSreddit extends Component {
     );
   }
 }
-
-// .then(response => console.log(response.data.children))
-// .then(response =>  {postComponent = response.data.children.
-//   map(post => (
-//     <RedditNews
-//       title={post.data.title}
-//       author={post.data.author}
-//       url={post.data.url}
-//     />
-//   )
-//   )
 
 export default JSreddit;

@@ -2,16 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .mainDisp {
   background-color: #272a36;
   margin-left: 140px;
-  width: 33.33%;
 }
-.jsRedditList {
-  width: 100%;
-}
+
 .listTitle h4 {
   text-transform: uppercase;
   color: #8be9fd;
@@ -23,13 +20,19 @@
   margin: 30px;
   text-align: center;
 }
-.newsList {
-  overflow: scroll;
+
+.newsList::-webkit-scrollbar {
+  display: none;
 }
+
 .App {
   width: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: row;
+}
+.invisibleScrollbar:-webkit-scrollbar {
+  display: none;
 }
 a {
   text-decoration: none;

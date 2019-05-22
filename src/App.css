@@ -7,6 +7,8 @@
 .mainDisp {
   background-color: #272a36;
   margin-left: 140px;
+  display: flex;
+  flex-direction: row;
 }
 
 .listTitle h4 {

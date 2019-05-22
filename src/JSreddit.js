@@ -29,11 +29,11 @@ class JSreddit extends Component {
   render() {
     const { error, isLoading, redditPosts } = this.state;
     return (
-      <div className="jsRedditList" style={{ height: "180%" }}>
+      <div className="jsRedditList" style={{ height: "100%", margin: "0px" }}>
         <div
           className="listTitle"
           style={{
-            margin: "30px",
+            margin: "0px",
             textAlign: "center"
           }}
         >

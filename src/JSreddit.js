@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaRedditAlien } from "react-icons/fa";
 import RedditNews from "./RedditNews";
+import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 
 class JSreddit extends Component {
   state = {
@@ -29,24 +30,36 @@ class JSreddit extends Component {
   render() {
     const { error, isLoading, redditPosts } = this.state;
     return (
-      <div className="jsRedditList" style={{ height: "100%", margin: "0px" }}>
-        <div
-          className="listTitle"
+      <div
+        className="jsRedditList"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          maxHeight: "100%",
+          margin: "0px",
+          width: "25%",
+          position: "relative"
+        }}
+      >
+        <h4
           style={{
-            margin: "0px",
-            textAlign: "center"
+            color: "#8be9fd",
+            textTransform: "uppercase",
+            fontFamily: "Inconsolata, monospace",
+            textAlign: "center",
+            marginTop: "40px"
           }}
         >
-          <h4>
-            <FaRedditAlien /> popular on r/javascript
-          </h4>
-        </div>
+          <FaRedditAlien size="18" /> popular on r/javascript
+        </h4>
+
         <ul
           className="newsList invisibleScrollbar"
           style={{
             // overflow: "scroll",
-            overflowY: "auto",
-            maxHeight: "100%",
+            overflow: "auto",
+            // maxHeight: "100%",
+            flex: "1",
             marginTop: "40px"
           }}
         >

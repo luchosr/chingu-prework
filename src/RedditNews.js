@@ -6,7 +6,10 @@ const RedditNews = props => {
       style={{
         margin: "20px",
         fontFamily: "Inconsolata , monospace",
-        listStyleType: "none"
+        listStyleType: "none",
+        borderColor: "#44475a",
+        borderLeftWidth: "3px",
+        borderLeftStyle: "solid"
       }}
     >
       <h5

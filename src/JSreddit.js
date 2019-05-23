@@ -56,9 +56,7 @@ class JSreddit extends Component {
         <ul
           className="newsList invisibleScrollbar"
           style={{
-            // overflow: "scroll",
             overflow: "auto",
-            // maxHeight: "100%",
             flex: "1",
             marginTop: "40px"
           }}

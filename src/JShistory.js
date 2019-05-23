@@ -84,7 +84,11 @@ class JShistory extends React.Component {
               fontFamily: "Helvetica Neue, sans-serif"
             }}
           >
-            1:07 <span style={{ fontSize: "32px" }}>PM</span>
+            {this.state.date.toLocaleTimeString(navigator.language, {
+              hour: "2-digit",
+              minute: "2-digit"
+            })}{" "}
+            <span style={{ fontSize: "32px" }}>PM</span>
           </h2>
           <h5 className="date">May 22, 2019</h5>
           <p className="explText">

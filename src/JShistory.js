@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegClock } from "react-icons/fa";
+import { FaRegClock, FaJsSquare } from "react-icons/fa";
 import HistoryData from "./HistoryData";
 
 class JShistory extends React.Component {
@@ -9,6 +9,20 @@ class JShistory extends React.Component {
   };
 
   render() {
+    const historyComponent = HistoryData.map(data => (
+      <li style={{ marginBottom: "18px", borderRadius: "3px" }}>
+        <span style={{ textAlign: "left" }}>
+          <span style={{ padding: "5px" }} /> <FaJsSquare />{" "}
+          <a href="https://javascript.info/" style={{ color: "#6272a4" }}>
+            {data.title}
+          </a>
+        </span>
+
+        <span style={{ color: "#999", textAlign: "right", width: "25%" }}>
+          {data.timeAgo} ago
+        </span>
+      </li>
+    ));
     return (
       <div
         style={{
@@ -18,7 +32,7 @@ class JShistory extends React.Component {
           textAlign: "center",
           position: "relative",
           top: "0",
-          width: "40%"
+          width: "45%"
         }}
       >
         <div
@@ -46,13 +60,9 @@ class JShistory extends React.Component {
             className="jsLinkList"
             style={{ listStyleType: "none", marginTop: "40px" }}
           >
-            <li>
-              <img src="" alt="" />
-              <a href="">noticia de JS</a>
-              <span>hace cuanto tiempo</span>
-            </li>{" "}
+            {historyComponent}
           </ul>
-        </div>{" "}
+        </div>
         <div
           style={{
             width: "100%",

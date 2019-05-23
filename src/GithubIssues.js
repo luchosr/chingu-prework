@@ -25,7 +25,18 @@ class GithubIssues extends React.Component {
           <FaGithubAlt />
           <span style={{ margin: "7px" }}>Github Issues History</span>
         </h4>
-        <a href="www.gitlab.com">switch to gitlab</a>
+        <a
+          href="www.gitlab.com"
+          style={{
+            textAlign: "center",
+            color: "#6272a4",
+            fontFamily: "Inconsolata, monospace",
+            fontSize: "14px",
+            margin: "3px"
+          }}
+        >
+          switch to gitlab
+        </a>
       </div>
     );
   }

@@ -22,10 +22,10 @@ class GithubIssues extends React.Component {
             marginTop: "40px"
           }}
         >
-          <span style={{ margin: "10px;" }} />
           <FaGithubAlt />
-          Github Issues History
+          <span style={{ margin: "7px" }}>Github Issues History</span>
         </h4>
+        <a href="www.gitlab.com">switch to gitlab</a>
       </div>
     );
   }

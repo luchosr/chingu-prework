@@ -4,13 +4,49 @@
   padding: 0;
   overflow: hidden;
 }
+a {
+  text-decoration: none;
+}
+.sideBar {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  background-color: #44475a;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sideBar__Link {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  padding: 3px;
+}
+.sideBar__Link__Icon {
+  padding: 4px;
+  border-radius: 1.5px;
+  color: #44475a;
+}
 
-.mainDisp {
+.sideBar__Link a {
+  height: 18px;
+  padding: 3px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: "Inconsolata", monospace;
+  margin-left: 5px;
+}
+
+.mainDisplay {
   background-color: #272a36;
   margin-left: 140px;
   display: flex;
-  /* max-height: 100%; */
   flex-direction: row;
+  max-height: 100%;
+  width: calc(100% - 140px);
+  position: absolute;
 }
 
 .listTitle h4 {
@@ -33,46 +69,8 @@
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  height: 100%;
+  /* height: 100%; */
 }
 .invisibleScrollbar::-webkit-scrollbar {
   display: none;
-}
-a {
-  text-decoration: none;
-}
-.sideBar {
-  height: 100%;
-  width: 140px;
-  position: fixed;
-  /* z-index: 1; */
-  top: 0;
-  left: 0;
-  background-color: #44475a;
-
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-.link {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  margin: 5px;
-  padding: 3px;
-}
-.linkIcon {
-  padding: 4px;
-  border-radius: 1.5px;
-  color: #44475a;
-}
-
-.link a {
-  height: 18px;
-  padding: 3px;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-family: "Inconsolata", monospace;
-  margin-left: 5px;
 }

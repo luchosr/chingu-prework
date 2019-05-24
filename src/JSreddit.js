@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { FaRedditAlien } from "react-icons/fa";
 import RedditNews from "./RedditNews";
-import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
-
 class JSreddit extends Component {
   state = {
     error: null,

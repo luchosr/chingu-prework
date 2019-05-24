@@ -1,5 +1,4 @@
 import React from "react";
-//import linksData from "./linksData";
 import Link from "./Link";
 
 import {

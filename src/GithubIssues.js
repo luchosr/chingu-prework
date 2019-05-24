@@ -50,7 +50,93 @@ class GithubIssues extends React.Component {
       </li>
     ));
     return (
-      <div
+      <div style={{ overflow: "auto", maxHeight: "50%", width: "20%" }}>
+        <div
+          style={{
+            textAlign: "center",
+            fontFamily: "Inconsolata, monospace"
+          }}
+        >
+          <h4
+            style={{
+              color: "#8be9fd",
+              fontSize: "16px",
+              textTransform: "uppercase",
+              textAlign: "center",
+              marginTop: "40px",
+              marginRight: "10px",
+              marginBottom: "0"
+            }}
+          >
+            <FaGithubAlt />
+            <span style={{ margin: "7px" }}>Github Issues History</span>
+          </h4>
+          <a
+            href="www.gitlab.com"
+            style={{
+              textAlign: "center",
+              color: "#6272a4",
+
+              fontSize: "12px",
+              cursor: "pointer"
+            }}
+          >
+            switch to gitlab
+          </a>
+          <div style={{ margin: "20px 0 40px 0" }}>
+            <a href="#">
+              {" "}
+              <span
+                style={{
+                  color: "#f1fa8c",
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  position: "relative",
+                  margin: "5px",
+                  fontSize: "14px",
+                  fontFamily: "Arial,sans-serif"
+                }}
+              >
+                issues
+              </span>
+            </a>
+
+            {""}
+            <a href="#">
+              {" "}
+              <span
+                style={{
+                  color: "#ff79c6",
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  position: "relative",
+                  fontWeight: "bold",
+                  margin: "5px"
+                }}
+              >
+                pull requests
+              </span>
+            </a>
+          </div>
+          <ul
+            style={{
+              marginTop: "40px",
+              overflow: "auto",
+              width: "90%"
+            }}
+          >
+            {issues}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default GithubIssues;
+
+/*
+<div
         style={{
           fontFamily: "Inconsolata, monospace",
           maxHeight: "calc(100% - 140px)",
@@ -127,8 +213,4 @@ class GithubIssues extends React.Component {
           <h4>advertisement</h4>
         </div>
       </div>
-    );
-  }
-}
-
-export default GithubIssues;
+*/

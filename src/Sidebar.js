@@ -1,15 +1,4 @@
 import React from "react";
-//import { faStackOverflow } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
-import {
-  faWrench,
-  faCode,
-  faChartLine,
-  faPencilAlt,
-  faLightbulb,
-  faQuestion
-} from "@fortawesome/free-solid-svg-icons";
 import NavLink from "./NavLink";
 
 const Sidebar = () => {

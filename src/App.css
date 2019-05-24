@@ -7,6 +7,10 @@
 a {
   text-decoration: none;
 }
+.invisibleScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .sideBar {
   height: 100%;
   width: 140px;
@@ -49,28 +53,26 @@ a {
   position: absolute;
 }
 
-.listTitle h4 {
+.title {
   text-transform: uppercase;
   color: #8be9fd;
   font-family: "Inconsolata", monospace;
   padding: 10px;
-}
-
-.listTitle {
-  margin: 30px;
   text-align: center;
+  margin-top: 25px;
 }
 
-.App {
+.redditContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  max-height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  /* height: 100%; */
+  width: 25%;
+  position: relative;
 }
-.invisibleScrollbar::-webkit-scrollbar {
-  display: none;
-}
+/* .redditContainer__itemsList {
+  flex: 1;
+  margin-top: "20px";
+  overflow: "auto";
+} */
+/* fijate que pasa con esta clase que no funciona */

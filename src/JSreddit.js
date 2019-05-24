@@ -28,47 +28,31 @@ class JSreddit extends Component {
   render() {
     const { error, isLoading, redditPosts } = this.state;
     return (
-      <div
-        className="jsRedditList"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          maxHeight: "100%",
-          margin: "0px",
-          width: "25%",
-          position: "relative"
-        }}
-      >
-        <h4
-          style={{
-            color: "#8be9fd",
-            textTransform: "uppercase",
-            fontFamily: "Inconsolata, monospace",
-            textAlign: "center",
-            marginTop: "40px"
-          }}
-        >
-          <FaRedditAlien size="18" /> popular on r/javascript
-        </h4>
+      <div className="redditContainer">
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <h4 className="title">
+            <FaRedditAlien size="18" /> popular on r/javascript
+          </h4>
 
-        <ul
-          className="newsList invisibleScrollbar"
-          style={{
-            overflow: "auto",
-            flex: "1",
-            marginTop: "40px"
-          }}
-        >
-          {redditPosts.length > 0 &&
-            redditPosts.map(post => (
-              <RedditNews
-                title={post.data.title}
-                author={post.data.author}
-                url={post.data.url}
-                score={post.data.score}
-              />
-            ))}
-        </ul>
+          <ul
+            className="redditContainer__itemsList invisibleScrollbar "
+            style={{
+              flex: "1",
+              marginTop: "20px",
+              overflow: "auto"
+            }}
+          >
+            {redditPosts.length > 0 &&
+              redditPosts.map(post => (
+                <RedditNews
+                  title={post.data.title}
+                  author={post.data.author}
+                  url={post.data.url}
+                  score={post.data.score}
+                />
+              ))}
+          </ul>
+        </div>
       </div>
     );
   }

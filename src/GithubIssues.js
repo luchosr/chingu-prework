@@ -1,8 +1,6 @@
 import React from "react";
-import { FaGithubAlt } from "react-icons/fa";
+import { FaGithubAlt, FaDivide } from "react-icons/fa";
 import IssuesData from "./IssuesData";
-import { link } from "fs";
-import { maxHeaderSize } from "http";
 
 class GithubIssues extends React.Component {
   render() {
@@ -50,83 +48,107 @@ class GithubIssues extends React.Component {
       </li>
     ));
     return (
-      <div style={{ overflow: "auto", maxHeight: "50%", width: "20%" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <div
           style={{
-            textAlign: "center",
-            fontFamily: "Inconsolata, monospace"
+            flex: 1,
+            maxHeight: "calc(100% - 150px)",
+            borderBottom: "1px solid #44475a",
+            marginLeft: "20px",
+            paddingRight: "20px"
           }}
         >
-          <h4
+          <div
+            className="invisibleScrollbar"
             style={{
-              color: "#8be9fd",
-              fontSize: "16px",
-              textTransform: "uppercase",
-              textAlign: "center",
-              marginTop: "40px",
-              marginRight: "10px",
-              marginBottom: "0"
-            }}
-          >
-            <FaGithubAlt />
-            <span style={{ margin: "7px" }}>Github Issues History</span>
-          </h4>
-          <a
-            href="www.gitlab.com"
-            style={{
-              textAlign: "center",
-              color: "#6272a4",
-
-              fontSize: "12px",
-              cursor: "pointer"
-            }}
-          >
-            switch to gitlab
-          </a>
-          <div style={{ margin: "20px 0 40px 0" }}>
-            <a href="#">
-              {" "}
-              <span
-                style={{
-                  color: "#f1fa8c",
-                  textTransform: "uppercase",
-                  textAlign: "center",
-                  position: "relative",
-                  margin: "5px",
-                  fontSize: "14px",
-                  fontFamily: "Arial,sans-serif"
-                }}
-              >
-                issues
-              </span>
-            </a>
-
-            {""}
-            <a href="#">
-              {" "}
-              <span
-                style={{
-                  color: "#ff79c6",
-                  textTransform: "uppercase",
-                  textAlign: "center",
-                  position: "relative",
-                  fontWeight: "bold",
-                  margin: "5px"
-                }}
-              >
-                pull requests
-              </span>
-            </a>
-          </div>
-          <ul
-            style={{
-              marginTop: "40px",
               overflow: "auto",
-              width: "90%"
+              textAlign: "center",
+              fontFamily: "Inconsolata, monospace",
+              maxHeight: "100%"
             }}
           >
-            {issues}
-          </ul>
+            <h4
+              style={{
+                color: "#8be9fd",
+                fontSize: "16px",
+                textTransform: "uppercase",
+                textAlign: "center",
+                marginTop: "40px",
+                marginBottom: "0"
+              }}
+            >
+              <FaGithubAlt />
+              <span style={{ margin: "7px" }}>Github Issues History</span>
+            </h4>
+            <a
+              href="www.gitlab.com"
+              style={{
+                textAlign: "center",
+                color: "#6272a4",
+
+                fontSize: "12px",
+                cursor: "pointer"
+              }}
+            >
+              switch to gitlab
+            </a>
+            <div style={{ margin: "20px 0 40px 0" }}>
+              <a href="#">
+                {" "}
+                <span
+                  style={{
+                    color: "#f1fa8c",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                    position: "relative",
+                    margin: "5px",
+                    fontSize: "14px",
+                    fontFamily: "Arial,sans-serif"
+                  }}
+                >
+                  issues
+                </span>
+              </a>
+
+              {""}
+              <a href="#">
+                {" "}
+                <span
+                  style={{
+                    color: "#ff79c6",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                    position: "relative",
+                    fontWeight: "bold",
+                    margin: "5px"
+                  }}
+                >
+                  pull requests
+                </span>
+              </a>
+            </div>
+            <ul
+              style={{
+                marginTop: "40px",
+                overflow: "auto",
+                width: "90%"
+              }}
+            >
+              {issues}
+            </ul>
+          </div>
+        </div>
+        <div className="advertisement">
+          <h3
+            style={{
+              color: "#fafafa",
+              flex: 1,
+              height: "180px",
+              backgroundColor: "#fafafa"
+            }}
+          >
+            advertisement!!!!
+          </h3>
         </div>
       </div>
     );

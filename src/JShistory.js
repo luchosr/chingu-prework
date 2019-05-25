@@ -1,14 +1,38 @@
 import React from "react";
 import { FaRegClock, FaJsSquare } from "react-icons/fa";
 import HistoryData from "./HistoryData";
+import Clock from "./Clock";
 
 class JShistory extends React.Component {
   state = {
     jsHistory: [],
-    date: new Date()
+    date: new Date(),
+    hour: "",
+    time12: "PM",
+    month: "",
+    day: "",
+    year: ""
   };
 
   render() {
+    // const clock = () => {
+    //   return (
+    //     <h2
+    //       className="hour"
+    //       style={{
+    //         fontSize: "120px",
+    //         fontWeight: "normal",
+    //         fontFamily: "Helvetica Neue, sans-serif"
+    //       }}
+    //     >
+    //       {new Date().toLocaleTimeString(navigator.language, {
+    //         hour: "2-digit",
+    //         minute: "2-digit"
+    //       })}{" "}
+    //       <span style={{ fontSize: "32px" }}>PM</span>
+    //     </h2>
+    //   );
+    // };
     const historyComponent = HistoryData.map(data => (
       <li style={{ marginBottom: "18px", borderRadius: "3px" }}>
         <span style={{ textAlign: "left" }}>
@@ -32,7 +56,7 @@ class JShistory extends React.Component {
           textAlign: "center",
           position: "relative",
           top: "0",
-          width: "45%"
+          flex: 2
         }}
       >
         <div
@@ -76,21 +100,32 @@ class JShistory extends React.Component {
             maxHeight: "202px"
           }}
         >
-          <h2
+          {/* <h2
             className="hour"
             style={{
-              fontSize: "120px",
+              fontSize: "12px",
               fontWeight: "normal",
               fontFamily: "Helvetica Neue, sans-serif"
             }}
           >
             {this.state.date.toLocaleTimeString(navigator.language, {
-              hour: "2-digit",
-              minute: "2-digit"
+              month: "short",
+              day: "numeric",
+              year: "numeric"
+               hour: "2-digit",
+              minute: "2-digit",
+              hour12: true 
             })}{" "}
             <span style={{ fontSize: "32px" }}>PM</span>
-          </h2>
-          <h5 className="date">May 22, 2019</h5>
+          </h2> */}
+          <Clock />
+          <h5 className="date">
+            {this.state.date.toLocaleTimeString(navigator.language, {
+              month: "short",
+              day: "numeric",
+              year: "numeric"
+            })}
+          </h5>
           <p className="explText">
             Did you know you can add CUSTOM LINKS to display in this section?
             <br /> Open the SETTINGS panel and add the URLs of your favorites

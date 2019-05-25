@@ -28,7 +28,11 @@ class JSreddit extends Component {
   render() {
     const { error, isLoading, redditPosts } = this.state;
     return (
-      <div className="redditContainer">
+      <div
+        //redditContainer
+        className=" invisibleScrollbar"
+        style={{ overflow: "auto", flex: 1 }}
+      >
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h4 className="title">
             <FaRedditAlien size="18" /> popular on r/javascript
@@ -36,11 +40,11 @@ class JSreddit extends Component {
 
           <ul
             className="redditContainer__itemsList invisibleScrollbar "
-            style={{
-              flex: "1",
-              marginTop: "20px",
-              overflow: "auto"
-            }}
+            // style={{
+            //   flex: "1",
+            //   marginTop: "20px",
+            //   overflow: "auto"
+            // }}
           >
             {redditPosts.length > 0 &&
               redditPosts.map(post => (

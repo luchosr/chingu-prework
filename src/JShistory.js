@@ -119,12 +119,12 @@ class JShistory extends React.Component {
             <span style={{ fontSize: "32px" }}>PM</span>
           </h2> */}
           <Clock />
-          <h5 className="date">
-            {this.state.date.toLocaleTimeString(navigator.language, {
+          <h5 className="date" id="date">
+            {/* {this.state.date.toLocaleTimeString(navigator.language, {
               month: "short",
               day: "numeric",
               year: "numeric"
-            })}
+            })} */}
           </h5>
           <p className="explText">
             Did you know you can add CUSTOM LINKS to display in this section?

@@ -1,42 +1,62 @@
 import React from "react";
-import moment from "moment";
 
 class Clock extends React.Component {
-  state = {
-    date: new Date(),
-    hour: "",
-    month: "",
-    day: "",
-    year: ""
-  };
-  getTime() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date()
+    };
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.tick(), 60000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+  tick() {
     this.setState({
-      date: new Date(),
-      hour: this.state.date.toLocaleTimeString(navigator.language, {
-        hour: "2-digit",
-        minute: "2-digit"
-      })
+      date: new Date()
     });
   }
   render() {
+    let hour =
+      parseInt(
+        this.state.date.toLocaleTimeString(navigator.language, {
+          hour: "2-digit"
+        }),
+        10
+      ) - 12;
+    let minutes = this.state.date.toLocaleTimeString(navigator.language, {
+      minute: "2-digit"
+    });
+    let amPm = () =>
+      parseInt(
+        this.state.date.toLocaleTimeString(navigator.language, {
+          hour: "2-digit"
+        }),
+        10
+      ) > 12
+        ? "PM"
+        : "AM";
     return (
-      <h2
-        className="hour"
-        style={{
-          fontSize: "120px",
-          fontWeight: "normal",
-          fontFamily: "Helvetica Neue, sans-serif"
-        }}
-      >
-        {this.state.date.toLocaleTimeString(navigator.language, {
-          hour: "2-digit",
-          minute: "2-digit"
-        })}
-        <span style={{ fontSize: "32px" }} />
-      </h2>
+      <div>
+        <h2
+          className="hour"
+          style={{
+            fontSize: "120px",
+            fontWeight: "normal",
+            fontFamily: "Helvetica Neue, sans-serif"
+          }}
+        >
+          {hour}:{parseInt(minutes) < 10 ? 0 + minutes : minutes}
+          <span style={{ fontSize: "32px" }}>{amPm()}</span>
+        </h2>
+      </div>
     );
   }
 }
+
 export default Clock;
 
 /*

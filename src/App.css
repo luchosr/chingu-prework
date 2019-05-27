@@ -42,6 +42,14 @@ a {
   font-family: "Inconsolata", monospace;
   margin-left: 5px;
 }
+.mediaIcon {
+  margin: 3px;
+  padding: 3px 7px 0 8px;
+  /* background-color: #8be9fd; */
+  border-radius: 15px;
+  display: inline-block;
+  height: 24px;
+}
 
 .mainDisplay {
   background-color: #272a36;

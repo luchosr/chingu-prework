@@ -15,33 +15,14 @@ class JShistory extends React.Component {
   };
 
   render() {
-    // const clock = () => {
-    //   return (
-    //     <h2
-    //       className="hour"
-    //       style={{
-    //         fontSize: "120px",
-    //         fontWeight: "normal",
-    //         fontFamily: "Helvetica Neue, sans-serif"
-    //       }}
-    //     >
-    //       {new Date().toLocaleTimeString(navigator.language, {
-    //         hour: "2-digit",
-    //         minute: "2-digit"
-    //       })}{" "}
-    //       <span style={{ fontSize: "32px" }}>PM</span>
-    //     </h2>
-    //   );
-    // };
     const historyComponent = HistoryData.map(data => (
-      <li style={{ marginBottom: "18px", borderRadius: "3px" }}>
-        <span style={{ textAlign: "left" }}>
-          <span style={{ padding: "5px" }} /> <FaJsSquare />{" "}
-          <a href="https://javascript.info/" style={{ color: "#6272a4" }}>
-            {data.title}
-          </a>
-        </span>
-
+      <li
+        style={{ marginBottom: "18px", borderRadius: "3px", textAlign: "left" }}
+      >
+        <FaJsSquare />{" "}
+        <a href="https://javascript.info/" style={{ color: "#6272a4" }}>
+          {data.title}
+        </a>
         <span style={{ color: "#999", textAlign: "right", width: "25%" }}>
           {data.timeAgo} ago
         </span>
@@ -74,7 +55,7 @@ class JShistory extends React.Component {
               textTransform: "uppercase",
               textAlign: "center",
               marginBottom: "10px",
-              marginTop: "40px",
+              marginTop: "30px",
               fontSize: "16px"
             }}
           >
@@ -82,7 +63,11 @@ class JShistory extends React.Component {
           </h4>
           <ul
             className="jsLinkList"
-            style={{ listStyleType: "none", marginTop: "40px" }}
+            style={{
+              listStyleType: "none",
+              marginTop: "40px",
+              verticalAlign: "baseline"
+            }}
           >
             {historyComponent}
           </ul>
@@ -100,32 +85,8 @@ class JShistory extends React.Component {
             maxHeight: "202px"
           }}
         >
-          {/* <h2
-            className="hour"
-            style={{
-              fontSize: "12px",
-              fontWeight: "normal",
-              fontFamily: "Helvetica Neue, sans-serif"
-            }}
-          >
-            {this.state.date.toLocaleTimeString(navigator.language, {
-              month: "short",
-              day: "numeric",
-              year: "numeric"
-               hour: "2-digit",
-              minute: "2-digit",
-              hour12: true 
-            })}{" "}
-            <span style={{ fontSize: "32px" }}>PM</span>
-          </h2> */}
           <Clock />
-          <h5 className="date" id="date">
-            {/* {this.state.date.toLocaleTimeString(navigator.language, {
-              month: "short",
-              day: "numeric",
-              year: "numeric"
-            })} */}
-          </h5>
+          <h5 className="date" id="date" />
           <p className="explText">
             Did you know you can add CUSTOM LINKS to display in this section?
             <br /> Open the SETTINGS panel and add the URLs of your favorites

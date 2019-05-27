@@ -31,6 +31,8 @@ class JShistory extends React.Component {
     return (
       <div
         style={{
+          display: "flex",
+          flexDirection: "column",
           color: "#6272a4",
           fontFamily: "Inconsolata, monospace",
           maxHeight: "100%",
@@ -77,21 +79,13 @@ class JShistory extends React.Component {
             width: "100%",
             margin: "auto",
             textAlign: "center",
-            whiteSpace: "nowrap",
             cursor: "default",
-            position: "absolute",
             bottom: "calc(25% - 101px)",
-            height: "202px",
-            maxHeight: "202px"
+            height: "402px",
+            marginTop: "180px"
           }}
         >
           <Clock />
-          <h5 className="date" id="date" />
-          <p className="explText">
-            Did you know you can add CUSTOM LINKS to display in this section?
-            <br /> Open the SETTINGS panel and add the URLs of your favorites
-            sites to the 'CUSTOM LINKS' textarea.
-          </p>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ import {
 const Sidebar = () => {
   return (
     <div
-      className="sideBar"
+      className="sidebar"
       style={{
         display: "flex",
         flexDirection: "column"
@@ -22,42 +22,46 @@ const Sidebar = () => {
         <NavLink />
       </div>
 
-      <div
-        className="logos"
-        style={{
-          height: "700px",
-          display: "flex",
-          flexDirection: "column-reverse",
-          margin: "0 auto"
-        }}
-      >
-        <div
-          className="socialMedia"
-          style={{ color: "#f8f8f2", height: "40px", margin: "10px auto" }}
-        >
-          <span className="mediaIcon" style={{ backgroundColor: "#3C5A99" }}>
+      <div className="sidebar__logo">
+        <div style={{ marginLeft: "15px" }}>
+          <InitabLogo />
+        </div>
+        <div className="sidebar__socialMedia">
+          <a
+            target="_blank"
+            href="https://facebook.com"
+            className="mediaIcon"
+            style={{ backgroundColor: "#3C5A99", textDecoration: "none" }}
+          >
             <FaFacebookF size={12} />
-          </span>
-          <span className="mediaIcon" style={{ backgroundColor: "#0077b5" }}>
+          </a>
+          <a
+            target="_blank"
+            href="https://linkedin.com"
+            className="mediaIcon"
+            style={{ backgroundColor: "#0077b5" }}
+          >
             <FaLinkedinIn size={12} />
-          </span>
-          <span className="mediaIcon" style={{ backgroundColor: "#1DA1F2" }}>
+          </a>
+          <a
+            target="_blank"
+            href="https://twitter.com"
+            className="mediaIcon"
+            style={{ backgroundColor: "#1DA1F2" }}
+          >
             <FaTwitter size={12} />
-          </span>
-          <span className="mediaIcon">
+          </a>
+          <a target="_blank" href="https://reddit.com" className="mediaIcon">
             <FaRedditAlien
-              size={12}
+              size={14}
               style={{
                 backgroundColor: "#5296dd",
-                padding: "6px",
+                padding: "8px",
                 borderRadius: "15px",
                 margin: "-5"
               }}
             />
-          </span>
-        </div>
-        <div style={{ marginLeft: "15px" }}>
-          <InitabLogo />
+          </a>
         </div>
       </div>
     </div>

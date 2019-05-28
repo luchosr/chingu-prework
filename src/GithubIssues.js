@@ -5,17 +5,7 @@ import IssuesData from "./IssuesData";
 class GithubIssues extends React.Component {
   render() {
     const issues = IssuesData.map(data => (
-      <li
-        style={{
-          marginBottom: "40px",
-          fontSize: "14px",
-          textAlign: "left",
-          paddingLeft: "10px",
-          borderColor: "#44475a",
-          borderLeftWidth: "3px",
-          borderLeftStyle: "solid"
-        }}
-      >
+      <li className="githubIssue">
         <a
           href="https://www.javascript.info"
           style={{ textAlign: "left", color: "#6272a4" }}
@@ -48,7 +38,7 @@ class GithubIssues extends React.Component {
       </li>
     ));
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "column", width: "25%" }}>
         <div
           style={{
             flex: 1,

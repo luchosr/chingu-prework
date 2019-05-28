@@ -2,16 +2,7 @@ import React, { Component } from "react";
 
 const RedditNews = props => {
   return (
-    <li
-      style={{
-        margin: "20px",
-        fontFamily: "Inconsolata , monospace",
-        listStyleType: "none",
-        borderColor: "#44475a",
-        borderLeftWidth: "3px",
-        borderLeftStyle: "solid"
-      }}
-    >
+    <li className="redditNews">
       <h5
         className="postTittle"
         style={{ color: "#F8F8F2", padding: "10px", fontSize: "0.9em" }}

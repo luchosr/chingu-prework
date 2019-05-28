@@ -11,7 +11,7 @@ a {
   display: none;
 }
 
-.sideBar {
+.sidebar {
   height: 100%;
   width: 140px;
   position: fixed;
@@ -42,10 +42,25 @@ a {
   font-family: "Inconsolata", monospace;
   margin-left: 5px;
 }
+.sidebar__socialMedia {
+  color: #f8f8f2;
+  height: 40px;
+  margin: 20px auto;
+}
+.sidebar__socialMedia a:visited {
+  color: #f8f8f2;
+}
+.sidebar__logo {
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
 .mediaIcon {
   margin: 3px;
   padding: 3px 7px 0 8px;
-  /* background-color: #8be9fd; */
   border-radius: 15px;
   display: inline-block;
   height: 24px;
@@ -84,3 +99,26 @@ a {
   overflow: "auto";
 } */
 /* fijate que pasa con esta clase que no funciona */
+.redditNews {
+  margin: 20px;
+  font-family: "Inconsolata", monospace;
+  list-style-type: none;
+  border-left: 3px solid #44475a;
+  transition: border-left-color 0.6s;
+}
+.redditNews:hover {
+  border-left-color: #50fa7b;
+}
+.githubIssue {
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 10px;
+  border-color: #44475a;
+  border-left-width: 3px;
+  border-left-style: solid;
+  transition: border-left-color 0.6s;
+}
+.githubIssue:hover {
+  border-left-color: #50fa7b;
+}

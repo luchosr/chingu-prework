@@ -2,13 +2,10 @@ import React from "react";
 import { FaQuestionCircle, FaTimesCircle } from "react-icons/fa";
 import Paragraph from "./Paragraph";
 class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date()
-    };
-  }
-
+  state = {
+    date: new Date(),
+    hideParagraph: localStorage.getItem("hideParagraph")
+  };
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 60000);
   }
@@ -20,6 +17,10 @@ class Clock extends React.Component {
       date: new Date()
     });
   }
+  hideParagraph = () => {
+    this.setState({ hideParagraph: true });
+    localStorage.setItem("hideParagraph", "true");
+  };
 
   render() {
     const setHour = () => {
@@ -59,22 +60,12 @@ class Clock extends React.Component {
         <h5 style={{ fontSize: "20px", fontWeight: "200" }}>
           {this.state.date.toDateString()}
         </h5>
-        {}
-        <Paragraph />
+        {!this.state.hideParagraph && (
+          <Paragraph onClose={this.hideParagraph} />
+        )}
       </div>
     );
   }
 }
 
-/* <p className="explText" style={{ fontSize: "14px", marginTop: "15px" }}>
-          <span style={{ color: "#ffb86c", margin: "5px" }}>
-            <FaQuestionCircle size={18} />
-          </span>
-          Did you know you can add CUSTOM LINKS to display in this section?
-          <br /> Open the SETTINGS panel and add the URLs of your favorites
-          sites to the 'CUSTOM LINKS' textarea.
-        </p>
-        <a href="" style={{ color: "#ffb86c" }} >
-          <FaTimesCircle /> Got it! Don's show me this again.
-        </a> */
 export default Clock;
